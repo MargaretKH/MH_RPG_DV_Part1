@@ -55,7 +55,7 @@ function createUnityInstance(canvas, config, onProgress) {
       preserveDrawingBuffer: false,
       powerPreference: 2,
     },
-    wasmFileSize: 57710787,
+    wasmFileSize: 57567944,
     cacheControl: function (url) {
       return (url == Module.dataUrl || url.match(/\.bundle/)) ? "must-revalidate" : "no-store";
     },
@@ -304,8 +304,8 @@ function createUnityInstance(canvas, config, onProgress) {
     webgpuVersion = 0;
     canvas = document.createElement("canvas");
     if (canvas) {
-      var gl = canvas.getContext("webgl2");
-      var glVersion = gl ? 2 : 0;
+      gl = canvas.getContext("webgl2");
+      glVersion = gl ? 2 : 0;
       if (!gl) {
         if (gl = canvas && canvas.getContext("webgl")) glVersion = 1;
       }
